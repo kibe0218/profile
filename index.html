@@ -11,7 +11,7 @@
         body {
             font-family: Arial, sans-serif; /* 文字のフォント */
             background-color: #f0f0f0; /* 背景色 */
-            margin: 0 auto;
+            margin: 0;
             padding: 0;
         }
 
@@ -23,7 +23,6 @@
             text-align: center;
             position: sticky; /* スクロールしても上部に固定 */
             top: 0;
-            margin: 0 50px;
         }
 
         /* ナビゲーションのリンク */
@@ -51,6 +50,16 @@
             max-width: 400px; /* 最大横幅 */
             text-align: center; /* 中央揃え */
             margin: 50px auto; /* 上下の余白と中央寄せ */
+        }
+        @media (max-width: 768px) {
+            .profile-container {
+                max-width: 300px; /* 小さい画面では余白を減らす */
+            }
+        }
+        @media (max-width: 480px) {
+            .profile-container {
+                max-width: 200px; /* 小さい画面では余白を減らす */
+            }
         }
         /* プロフィール画像 */
         .profile-container img {
