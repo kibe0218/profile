@@ -11,7 +11,7 @@
         body {
             font-family: Arial, sans-serif; /* 文字のフォント */
             background-color: #f0f0f0; /* 背景色 */
-            margin: 0;
+            margin: 0 ;
             padding: 0;
         }
 
@@ -50,7 +50,16 @@
             text-align: center; /* 中央揃え */
             margin: 50px auto; /* 上下の余白と中央寄せ */
         }
-
+        @media (max-width: 768px) {
+            .profile-container {
+                max-width: 300px; /* 小さい画面では余白を減らす */
+            }
+        }
+        @media (max-width: 480px) {
+            .profile-container {
+                max-width: 200px; /* 小さい画面では余白を減らす */
+            }
+        }
         p {
             color: #555;
         }
@@ -90,12 +99,12 @@
         }
         @media (max-width: 768px) {
             .gallery img {
-                width: 25%;          /* 中くらいの画面なら2列に */
+                width: 30%;          /* 中くらいの画面なら2列に */
             }
         }
         @media (max-width: 480px) {
             .gallery img {
-                width: 50%;          /* 小さい画面なら1列に */
+                width: 45%;          /* 小さい画面なら1列に */
             }
         }
     </style>
