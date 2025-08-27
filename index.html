@@ -39,16 +39,14 @@
 
         .left-link {
             float: left;       /* 左に寄せる */
-            margin-right: auto; /* 右側のスペースを確保 */
         }
-
         /* プロフィール全体を囲むコンテナ */
         .profile-container {
             background-color: #fff; /* 背景白 */
-            padding: 30px; /* 内側余白 */
+            padding: 20px; /* 内側余白 */
             border-radius: 10px; /* 角を丸く */
             box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 影 */
-            max-width: 500px; /* 最大横幅 */
+            max-width: 400px; /* 最大横幅 */
             text-align: center; /* 中央揃え */
             margin: 50px auto; /* 上下の余白と中央寄せ */
         }
@@ -61,9 +59,15 @@
             object-fit: cover; /* 枠に合わせてトリミング */
         }
 
+        .profile-container ul{
+            text-align: left;
+            padding-left: 50px;
+        }
+
         .iconlink img{
             width: 50px;
             height: 50px;
+            border-radius: 0;
             object-fit: cover; /* 枠に合わせてトリミング */
         }
 
@@ -77,11 +81,16 @@
             color: #555;
         }
 
+        .links {
+            text-align: center;
+        }
+
         /* 外部リンクまとめ */
         .links a {
             display: block;
             margin: 5px 0;
             color: #0066cc;
+            text-decoration: none;
         }
 
         .links a:hover {
@@ -101,16 +110,16 @@
         <!-- ホームページへのリンク -->
         <a href="index.html" class="left-link"><span class="material-icons">home</span></a>
         <!-- 自己紹介ページへのリンク -->
-        <a href="about.html">自己紹介</a>
+        <a href="about.html" >Career</a>
         <!-- 連絡先ページへのリンク -->
-        <a href="contact.html">連絡先</a>
+        <a href="contact.html">Images</a>
     </nav>
 
     <!-- プロフィール内容 -->
     <div class="profile-container">
-        <img src="image/face.jpg" alt="Haruto.Kibeの写真"> <!-- 画像は自分のファイル名に変更可 -->
+        <img src="image/face.jpg" alt="Haruto.Kibeの写真" class="profile-image"> <!-- 画像は自分のファイル名に変更可 -->
         <h1>Haruto.Kibe</h1>
-        <p>こんにちは！木部陽翔です！！</p>
+        <p>こんにちは！木部陽翔（キベハルト）です！</p>
         <div class="image-links">
             <a href="https://www.instagram.com/kibeee.swt218_/" >
                 <img
@@ -125,15 +134,23 @@
                     class="iconlink">
             </a>
         </div>
-        <p>----------thanks----------</p>
-        <!-- 外部リンクまとめ -->
-        <div class="links">
-            <!-- HTMLタグ一覧ページへのリンク。新しいタブで開く -->
-            <a
-            href="http://www.fureai.or.jp/~irie/html-tag/" target="_blank">HTMLタグ一覧</a>
-            <!-- Visual Studio Code公式ページへのリンク -->
-            <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
-        </div>
+    </div>
+    <div class="profile-container">
+        <h2>趣味</h2>
+        <ul>
+            <li>邦楽（CHP，Tele，My hair is bad，etc..）</li>
+            <li>スキー</li>
+            <li>野球</li>
+        </ul>
+    </div>
+    <!-- 外部リンクまとめ -->
+    <div class="links">
+        <p>thanks</p>
+        <!-- HTMLタグ一覧ページへのリンク。新しいタブで開く -->
+        <a
+        href="http://www.fureai.or.jp/~irie/html-tag/" target="_blank">HTMLタグ一覧 </a>
+        <!-- Visual Studio Code公式ページへのリンク -->
+        <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
     </div>
 
 </body>
