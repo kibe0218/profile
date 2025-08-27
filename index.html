@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Haruto.Kibeのプロフィールページです。">
     <title>Haruto.Kibe's Profile</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         /* ページ全体のスタイル */
         body {
@@ -36,6 +37,11 @@
             text-decoration: underline;
         }
 
+        .left-link {
+            float: left;       /* 左に寄せる */
+            margin-right: auto; /* 右側のスペースを確保 */
+        }
+
         /* プロフィール全体を囲むコンテナ */
         .profile-container {
             background-color: #fff; /* 背景白 */
@@ -52,6 +58,12 @@
             width: 150px;
             height: 150px;
             border-radius: 50%; /* 丸くする */
+            object-fit: cover; /* 枠に合わせてトリミング */
+        }
+
+        .iconlink img{
+            width: 50px;
+            height: 50px;
             object-fit: cover; /* 枠に合わせてトリミング */
         }
 
@@ -75,6 +87,11 @@
         .links a:hover {
             text-decoration: underline;
         }
+        .image-links{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
     </style>
 </head>
 <body>
@@ -82,7 +99,7 @@
     <!-- メニュー -->
     <nav>
         <!-- ホームページへのリンク -->
-        <a href="index.html">ホーム</a>
+        <a href="index.html" class="left-link"><span class="material-icons">home</span></a>
         <!-- 自己紹介ページへのリンク -->
         <a href="about.html">自己紹介</a>
         <!-- 連絡先ページへのリンク -->
@@ -91,14 +108,29 @@
 
     <!-- プロフィール内容 -->
     <div class="profile-container">
-        <img src="Image.jpg" alt="Haruto.Kibeの写真"> <!-- 画像は自分のファイル名に変更可 -->
+        <img src="image/face.jpg" alt="Haruto.Kibeの写真"> <!-- 画像は自分のファイル名に変更可 -->
         <h1>Haruto.Kibe</h1>
         <p>こんにちは！木部陽翔です！！</p>
+        <div class="image-links">
+            <a href="https://www.instagram.com/kibeee.swt218_/" >
+                <img
+                    src="image/Instagram.png"
+                    alt="Instagramのアイコン"
+                    class="iconlink">
+            </a>
+            <a href="https://line.me/ti/p/zAtRKFtPci" >
+                <img
+                    src="image/Line.png"
+                    alt="Lineのアイコン"
+                    class="iconlink">
+            </a>
+        </div>
         <p>----------thanks----------</p>
         <!-- 外部リンクまとめ -->
         <div class="links">
             <!-- HTMLタグ一覧ページへのリンク。新しいタブで開く -->
-            <a href="http://www.fureai.or.jp/~irie/html-tag/" target="_blank">HTMLタグ一覧</a>
+            <a
+            href="http://www.fureai.or.jp/~irie/html-tag/" target="_blank">HTMLタグ一覧</a>
             <!-- Visual Studio Code公式ページへのリンク -->
             <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
         </div>
