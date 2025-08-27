@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Haruto.Kibeのプロフィールページです。">
+    <title>Haruto.Kibe's Profile</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* ページ全体のスタイル */
+        body {
+            font-family: Arial, sans-serif; /* 文字のフォント */
+            background-color: #f0f0f0; /* 背景色 */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ナビゲーションバー */
+        nav {
+            background-color: #333; /* 背景色を濃いグレーに */
+            padding: 10px 0;
+            text-align: center;
+            position: sticky; /* スクロールしても上部に固定 */
+            top: 0;
+        }
+
+        /* ナビゲーションのリンク */
+        nav a {
+            color: white; /* 文字色を白に */
+            text-decoration: none; /* 下線なし */
+            margin: 0 15px; /* 左右の間隔 */
+            font-weight: 400; /* 太字 */
+        }
+
+        /* ホバーしたときのリンクスタイル */
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .left-link {
+            float: left;       /* 左に寄せる */
+        }
+        /* プロフィール全体を囲むコンテナ */
+        .profile-container {
+            background-color: #fff; /* 背景白 */
+            padding: 20px; /* 内側余白 */
+            border-radius: 10px; /* 角を丸く */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 影 */
+            max-width: 400px; /* 最大横幅 */
+            text-align: center; /* 中央揃え */
+            margin: 50px auto; /* 上下の余白と中央寄せ */
+        }
+
+        p {
+            color: #555;
+        }
+
+        .links {
+            text-align: center;
+        }
+
+        /* 外部リンクまとめ */
+        .links a {
+            display: block;
+            margin: 5px 0;
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .image-links{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap; /* 行を自動で折り返す */
+            gap: 10px; /* 画像間の隙間 */
+            justify-content: center; /* 中央揃え */
+        }
+        .gallery img {
+            width: 33.3%;
+            height: auto;
+            object-fit: cover;
+            justify-content: center;
+        }
+        @media (max-width: 768px) {
+            .gallery img {
+                width: 50%;          /* 中くらいの画面なら2列に */
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery img {
+                width: 100%;          /* 小さい画面なら1列に */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- メニュー -->
+    <nav>
+        <!-- ホームページへのリンク -->
+        <a href="index.html" class="left-link"><span class="material-icons">home</span></a>
+        <!-- 連絡先ページへのリンク -->
+        <a href="images.html">Images</a>
+    </nav>
+
+    <div class="profile-container">
+        <h1>写真集</h1>
+        <p>写真をどんどん追加していきます！</p>
+    </div>
+    <div class="gallery">
+        <img src="image/imagepage/Image (0).jpg" alt="Image 0" title="秋葉原で見つけたエヴァンゲリオン弐号機">
+        <img src="image/imagepage/Image (1).jpg" alt="Image 1" title="東京都庁からの眺め">
+        <img src="image/imagepage/Image (2).jpg" alt="Image 2" title="浅草-雷門">
+        <img src="image/imagepage/Image (3).jpg" alt="Image 3" title="国立新美術館">
+        <img src="image/imagepage/Image (4).jpg" alt="Image 4" title="VisionPro">
+        <img src="image/imagepage/Image (5).jpg" alt="Image 5" title="東京タワー">
+        <img src="image/imagepage/Image (6).jpg" alt="Image 6" title="東京駅">
+        <img src="image/imagepage/Image (7).jpg" alt="Image 7" title="瀧くんのバイト先">
+    </div>
+    <div class="links">
+        <p>thanks</p>
+        <!-- HTMLタグ一覧ページへのリンク。新しいタブで開く -->
+        <a
+        href="http://www.fureai.or.jp/~irie/html-tag/" target="_blank">HTMLタグ一覧 </a>
+        <!-- Visual Studio Code公式ページへのリンク -->
+        <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
+    </div>
+
+</body>
+</html>
