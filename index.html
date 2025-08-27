@@ -1,49 +1,108 @@
-<!DOCTYPE html> <!-- HTML5で書かれていることを宣言 -->
-<html lang="ja"> <!-- このページの言語を日本語に設定 -->
-<head> <!-- ページのヘッダー情報（表示はされない部分） -->
-    <meta charset="UTF-8"> <!-- 文字コードをUTF-8に設定（日本語対応のため必要） -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホやPCでの表示を最適化 -->
-    <meta name="description" content="Haruto.Kibeのプロフィールページです。"> <!-- ページの説明 -->
-    <title>Haruto.Kibe's Profile</title> <!-- ブラウザのタブに表示されるタイトル -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Haruto.Kibeのプロフィールページです。">
+    <title>Haruto.Kibe's Profile</title>
     <style>
-        body { /* ページ全体のスタイル */
-            font-family: Arial, sans-serif; /* 文字のフォントを指定 */
-            background-color: #f0f0f0; /* 背景色を薄いグレーにする */
-            margin: 0; /* ページの余白をなくす */
-            padding: 20px; /* 全体に20pxの内側余白 */
-            display: flex; /* Flexboxを使って配置する */
-            justify-content: center; /* 中央寄せにする */
+        /* ページ全体のスタイル */
+        body {
+            font-family: Arial, sans-serif; /* 文字のフォント */
+            background-color: #f0f0f0; /* 背景色 */
+            margin: 0;
+            padding: 0;
         }
-        .profile-container { /* プロフィール全体を囲む箱 */
-            background-color: #fff; /* 背景を白にする */
-            padding: 30px; /* 内側の余白を30pxにする */
-            border-radius: 10px; /* 角を丸くする */
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 影をつける */
-            max-width: 400px; /* 横幅を最大400pxに制限 */
-            text-align: center; /* 中の文字や画像を中央揃え */
+
+        /* ナビゲーションバー */
+        nav {
+            background-color: #333; /* 背景色を濃いグレーに */
+            padding: 10px 0;
+            text-align: center;
+            position: sticky; /* スクロールしても上部に固定 */
+            top: 0;
         }
-        .profile-container img { /* プロフィール画像のスタイル */
-            width: 150px; /* 横幅150px */
-            height: 150px; /* 高さ150px */
-            border-radius: 50%; /* 丸い形にする */
-            object-fit: cover; /* 画像をトリミングして枠にぴったり収める */
+
+        /* ナビゲーションのリンク */
+        nav a {
+            color: white; /* 文字色を白に */
+            text-decoration: none; /* 下線なし */
+            margin: 0 15px; /* 左右の間隔 */
+            font-weight: 400; /* 太字 */
         }
-        h1 { /* 名前の見出しのスタイル */
-            margin: 15px 0 5px; /* 上に15px、下に5pxの余白 */
+
+        /* ホバーしたときのリンクスタイル */
+        nav a:hover {
+            text-decoration: underline;
         }
-        p { /* 自己紹介文のスタイル */
-            color: #555; /* 文字色を少し薄いグレーに */
+
+        /* プロフィール全体を囲むコンテナ */
+        .profile-container {
+            background-color: #fff; /* 背景白 */
+            padding: 30px; /* 内側余白 */
+            border-radius: 10px; /* 角を丸く */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 影 */
+            max-width: 500px; /* 最大横幅 */
+            text-align: center; /* 中央揃え */
+            margin: 50px auto; /* 上下の余白と中央寄せ */
+        }
+
+        /* プロフィール画像 */
+        .profile-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* 丸くする */
+            object-fit: cover; /* 枠に合わせてトリミング */
+        }
+
+        /* 名前のスタイル */
+        h1 {
+            margin: 15px 0 5px;
+        }
+
+        /* 自己紹介文のスタイル */
+        p {
+            color: #555;
+        }
+
+        /* 外部リンクまとめ */
+        .links a {
+            display: block;
+            margin: 5px 0;
+            color: #0066cc;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-<body> <!-- 実際に表示される内容を書く部分 -->
-    <div class="profile-container"> <!-- プロフィール全体をまとめる箱 -->
-        <img src="Image.jpg" alt="Haruto.Kibeの写真" width="400"> <!-- プロフィール画像（仮の画像を使用中） -->
-        <h1>Haruto.Kibe</h1> <!-- 名前を大きく表示 -->
-        <p>こんにちは！木部陽翔です！！</p> <!-- 自己紹介文 -->
+<body>
+
+    <!-- メニュー -->
+    <nav>
+        <!-- ホームページへのリンク -->
+        <a href="index.html">ホーム</a>
+        <!-- 自己紹介ページへのリンク -->
+        <a href="about.html">自己紹介</a>
+        <!-- 連絡先ページへのリンク -->
+        <a href="contact.html">連絡先</a>
+    </nav>
+
+    <!-- プロフィール内容 -->
+    <div class="profile-container">
+        <img src="Image.jpg" alt="Haruto.Kibeの写真"> <!-- 画像は自分のファイル名に変更可 -->
+        <h1>Haruto.Kibe</h1>
+        <p>こんにちは！木部陽翔です！！</p>
         <p>----------thanks----------</p>
-        <a href="http://www.fureai.or.jp/~irie/html-tag/">htmlタグ一覧</a>
-        <p><a href="https://code.visualstudio.com/">VisualStudioCode</a></p>
+        <!-- 外部リンクまとめ -->
+        <div class="links">
+            <!-- HTMLタグ一覧ページへのリンク。新しいタブで開く -->
+            <a href="http://www.fureai.or.jp/~irie/html-tag/" target="_blank">HTMLタグ一覧</a>
+            <!-- Visual Studio Code公式ページへのリンク -->
+            <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
+        </div>
     </div>
+
 </body>
 </html>
