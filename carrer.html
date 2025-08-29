@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Haruto.Kibeのプロフィールページです。">
+    <title>Haruto.Kibe's Profile</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* ページ全体のスタイル */
+        body {
+            font-family: Arial, sans-serif; /* 文字のフォント */
+            background-color: #f0f0f0; /* 背景色 */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ナビゲーションバー */
+        nav {
+            background-color: #333333b6; /* 背景色を濃いグレーに */
+            position: absolute;
+            z-index: 9999;
+            padding: 10px 0;
+            justify-content: center;
+            text-align: center;
+            position: sticky; /* スクロールしても上部に固定 */
+            top: 0;
+        }
+
+        /* ナビゲーションのリンク */
+        nav a {
+            color: white; /* 文字色を白に */
+            text-decoration: none; /* 下線なし */
+            margin: 0 15px; /* 左右の間隔 */
+            font-weight: 400; /* 太字 */
+        }
+
+        /* ホバーしたときのリンクスタイル */
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .arrow{
+            color: black;
+            text-align: center;
+        }
+
+        .left-link {
+            float: left;       /* 左に寄せる */
+        }
+        /* プロフィール全体を囲むコンテナ */
+        .profile-container {
+            background-color: #fff; /* 背景白 */
+            padding: 20px; /* 内側余白 */
+            border-radius: 10px; /* 角を丸く */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 影 */
+            max-width: 400px; /* 最大横幅 */
+            text-align: center; /* 中央揃え */
+            margin: 50px auto; /* 上下の余白と中央寄せ */
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        /* スクロールで画面に入ったら visible を付ける */
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                max-width: 350px; /* 小さい画面では余白を減らす */
+            }
+        }
+        @media (max-width: 480px) {
+            .profile-container {
+                max-width: 300px; /* 小さい画面では余白を減らす */
+            }
+        }
+        /* プロフィール画像 */
+        .profile-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* 丸くする */
+            object-fit: cover; /* 枠に合わせてトリミング */
+        }
+
+        .profile-container ul{
+            text-align: left;
+            padding-left: 50px;
+        }
+
+        .iconlink img{
+            width: 50px;
+            height: 50px;
+            border-radius: 0;
+            object-fit: cover; /* 枠に合わせてトリミング */
+        }
+
+        /* 名前のスタイル */
+        h1 {
+            margin: 15px 0 5px;
+        }
+
+        /* 自己紹介文のスタイル */
+        p {
+            color: #555;
+        }
+
+        .links {
+            text-align: center;
+        }
+
+        /* 外部リンクまとめ */
+        .links a {
+            display: block;
+            margin: 5px 0;
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .image-links{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- メニュー -->
+    <nav>
+        <!-- ホームページへのリンク -->
+        <a href="index.html" class="left-link"><span class="material-icons">home</span></a>
+        <!-- 連絡先ページへのリンク -->
+        <a href="images.html">Images</a>
+        <!-- キャリアへのリンク -->
+        <a href="carrer.html">Carrer</a>
+    </nav>
+
+    <!-- プロフィール内容 -->
+    <div class="profile-container fade-in">
+        <ul>
+            <li>2015.10　野球をはじめる</li>
+            <li>2019.03　藤枝市立岡部小学校を卒業</li>
+        </ul>
+    </div>
+    <div class="arrow fade-in">
+        <span class = "material-icons">arrow_downward</span>
+    </div>
+    <div class="profile-container fade-in">
+        <ul>
+            <li>2019.04　藤枝市立岡部中学校に入学</li>
+            <li>2019.05　野球部に入部</li>
+            <li>2020.02　コロナにより休校が始まる</li>
+            <li>2022.01　沼津高専機械工学科に合格</li>
+            <li>2022.03　藤枝市立岡部中学校を卒業</li>
+        </ul>
+    </div>
+    <div class="arrow fade-in">
+        <span class = "material-icons">arrow_downward</span>
+    </div>
+    <div class="profile-container fade-in">
+        <ul>
+            <li>2022.04　沼津高専機械工学科に入学</li>
+        </ul>
+    </div>
+    <div class="arrow fade-in">
+        <span class = "material-icons">arrow_downward</span>
+    </div>
+    <div class="profile-container fade-in">
+        <ul>
+            <li>Coming soon...</li>
+        </ul>
+    </div>
+    <!-- 外部リンクまとめ -->
+    <div class="links">
+        <p>thanks</p>
+        <!-- HTMLタグ一覧ページへのリンク。新しいタブで開く -->
+        <a
+        href="http://www.fureai.or.jp/~irie/html-tag/" target="_blank">HTMLタグ一覧 </a>
+        <!-- Visual Studio Code公式ページへのリンク -->
+        <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {//全部読み込まれたら実行する関数であることを示している（aweitみたいな感じ）
+            const faders = document.querySelectorAll(".fade-in");//fade-inクラスの要素をすべて取得，fadersの中にアニメーションの対象が入っている
+
+            const appearOptions = {
+                threshold: 0.1, // 10%要素が見えた
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, observer) {//IntersectionObserverというAPIを用いる．entriesは監視している要素の情報が入った配列．
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){//entry.isIntersectingがtrueとは，画面に入った状態
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target); // 一度表示したら監視解除
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {//さっきのfadersにintersectionObserverを設定
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
+
+</body>
+</html>
