@@ -60,15 +60,15 @@
         }
 
         .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
+            opacity: 0;/*透明になる*/
+            transform: translateY(30px);/*下にずらす */
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
 
         /* スクロールで画面に入ったら visible を付ける */
         .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+            opacity: 1;/*透明ではなくなる*/
+            transform: translateY(0);/*元の位置に戻す*/
         }
 
         @media (max-width: 768px) {
@@ -170,6 +170,7 @@
     <div class="profile-container fade-in">
         <ul>
             <li>2022.04　沼津高専機械工学科に入学</li>
+            <li>2022.05　トライアスロン部に入部</li>
         </ul>
     </div>
     <div class="arrow fade-in">
@@ -191,26 +192,25 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {//全部読み込まれたら実行する関数であることを示している（aweitみたいな感じ）
-            const faders = document.querySelectorAll(".fade-in");//fade-inクラスの要素をすべて取得，fadersの中にアニメーションの対象が入っている
+            const faders = document.querySelectorAll(".fade-in");//fade-inクラスの要素をすべて取得，fadersの中にアニメーションの対象全てを入れる
 
             const appearOptions = {
                 threshold: 0.1, // 10%要素が見えた
             };
 
             const appearOnScroll = new IntersectionObserver(function(entries, observer) {//IntersectionObserverというAPIを用いる．entriesは監視している要素の情報が入った配列．
-                entries.forEach(entry => {
+                entries.forEach(entry => {//entriesの中のentryをひとつずつ，それぞれ（each）取り出し，処理をする
                     if(entry.isIntersecting){//entry.isIntersectingがtrueとは，画面に入った状態
-                        entry.target.classList.add("visible");
-                        observer.unobserve(entry.target); // 一度表示したら監視解除
+                        entry.target.classList.add("visible");//CSSのvisibleが発動するようにする
+                        observer.unobserve(entry.target); // 一度訪問したら監視解除
                     }
                 });
-            }, appearOptions);
+            }, appearOptions);//判定をどうするかを司る変数
 
-            faders.forEach(fader => {//さっきのfadersにintersectionObserverを設定
-                appearOnScroll.observe(fader);
+            faders.forEach(fader => {//さっきのfadersをそれぞれ（each）faderとして処理する
+                appearOnScroll.observe(fader);//さっき定義したapperaOnScrollを呼び，faderを監視対象にすることを告げる
             });
         });
     </script>
-
 </body>
 </html>
